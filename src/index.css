@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: laura300;
+    src: url(/public/fonts/Lausanne-300.woff2);
+}
+@font-face {
+    font-family: laura500;
+    src: url(/public/fonts/Lausanne-500.woff2);
+}
+
+body{
+    overflow-x: hidden;
+}
+@keyframes moveAnimation {
+   from{
+    transform: translateX(0);
+   }
+   to{
+    transform: translateX(-100%);
+   }
+    
+}
+.moveX{
+    animation: moveAnimation 12s linear infinite;
+}
+.moveLink{
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+.hoverLink:hover .moveLink{
+    opacity: 1;
+}
+.HoverBlackLine{
+    transition: all 0.3s ease-in-out;
+}
+.blackLine:hover .HoverBlackLine{
+    background-color: black;
+}
